@@ -10,43 +10,45 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="templates")
+@Table(name="template")
 public class Template implements Serializable{
   private static final long serialVersionUID = 1L;
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "id")
-  private long id;
+  private Long id;
   
   @Column
-  private String templateName;
+  private String name;
   
-  @Column
-  private String tempalteContent;
+  @Column(length = 50000)
+  private String content;
 
-  public long getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
-  public String getTemplateName() {
-    return templateName;
+  public String getName() {
+    return name;
   }
 
-  public void setTemplateName(String templateName) {
-    this.templateName = templateName;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public String getTempalteContent() {
-    return tempalteContent;
+  public String getContent() {
+    return content;
   }
 
-  public void setTempalteContent(String tempalteContent) {
-    this.tempalteContent = tempalteContent;
+  public void setContent(String content) {
+    this.content = content;
   }
+
+  
 
   
   
