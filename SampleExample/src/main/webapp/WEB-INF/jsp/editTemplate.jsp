@@ -17,10 +17,7 @@ $("document").ready(function(){
 	});
 	
 	 $("#buttonId").click(function(){
-		 
-		 
-		var content=$iframe.contents().find("body").html();
-		alert(content)
+		var content=$iframe.contents().find("html").html();
 		$("#hiddenContentId").val(content)
 		alert($("#hiddenContentId").val())
 	}) 
