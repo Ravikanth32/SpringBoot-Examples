@@ -39,7 +39,7 @@ public class TemplateController {
   
   @RequestMapping(value="/editTemplate/{id}",method = RequestMethod.GET)
   public String editTemplate(@PathVariable("id") Long id,Model model){
-    
+    System.out.println("hello world");
     model.addAttribute("template",templateService.getTemplate(id));
     
     return "editTemplate";
